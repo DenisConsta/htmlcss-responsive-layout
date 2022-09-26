@@ -28,6 +28,7 @@ section .row .col{
 
 .btn a{
   color: black;
+  text-decoration: none;
 }
 
 /* utilities */
@@ -54,6 +55,12 @@ section .row .col{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Header */
@@ -84,15 +91,10 @@ main .cards-presentation{
 
 main .col{
   width: 100%;
-  height: 355px;
 }
 
 main .cards-presentation .col{
   margin-bottom: 25px;
-}
-
-main .col.double{
-  height: 600px;
 }
 
 main .card{
@@ -100,6 +102,82 @@ main .card{
   background-color: #B5DDFF;
   border-radius: 35px;
 }
+
+.cards-presentation .card:not(.double .card){
+  padding: 35px 30px;
+  text-align: center;
+}
+
+.cards-presentation .card i:not(.double .card i){
+  color: #0084FD;
+  font-size: 5rem;
+  padding-bottom: 30px;
+}
+
+main .card h3{
+  font-size: 1.2rem;
+  color: #0084FD;
+  font-weight: bold;
+}
+
+main .card h3:not(.double .card h3){
+  padding-bottom: 35px;
+}
+
+main .card p{
+  color: #5A687F;
+  font-size: .8rem;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+main .col.double{
+  height: 600px;
+}
+
+.col.double .card{
+  padding: 35px 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.double .card img{
+  height: 270px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  
+}
+
+.col.double .card .card-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.col.double .card .card-text> *{
+  margin-bottom: 30px;
+}
+
+.col.double .card .btn{
+  padding: 10px 40px;
+  background-color: #0084FD;
+}
+
+.col.double .card .btn a{
+  color: white;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+.col.double .card .btn a i{
+  padding-right:5px;
+}
+
+
 
 /* section.planning */
 main section.planning{
@@ -301,6 +379,19 @@ footer .container{
   main section.cards-presentation .col.double{
     height: 345px;
   }
+
+  section.cards-presentation .col.double .card{
+    padding: 35px 20px;
+  }
+
+  section.cards-presentation .col.double .card-text{
+    width: 50%;
+  }
+
+  section.cards-presentation .col.double .card img{
+    transform: translate(30%, 0);
+  }
+    
 
    /* section planning */
 
