@@ -1,5 +1,84 @@
+
+/* General */
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* utilities */
+
+.debug{
+  background-color: bisque;
+  border: 1px solid firebrick;
+}
+
+.container{
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  height: 100%;
+}
+
+/* Header */
+
+header{
+  height: 75px;
+  background-color: #0084FD;
+}
+
+/* Main */
+
+/* height da togliere */
+
+main{
+  padding-top: 50px;
+  height: 2000px;
+}
+
+main .col{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 25px;
+}
+
+main .col.double{
+  height: 600px;
+}
+
+main .card{
+  width: 100%;
+  height: 100%;
+  background-color: #B5DDFF;
+  border-radius: 35px;
+}
+
+/* tablet 768px */
+
+@media screen and (min-width: 768px) {
+  main .col{
+    width: calc((100% / 3) - 17px);
+    height: 565px;
+  }
+
+  main .col.double{
+    width: calc((((100% / 3) - 17px)*2) + 25px);
+    height: 565px;
+  }
+
+  main .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* desktop 992px*/
+@media screen and (min-width: 992px) {
+  main .col, 
+  main .col.double{
+    height: 345px;
+  }
 }
