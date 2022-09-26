@@ -81,6 +81,31 @@ section.planning .col .card{
   background-color: white;
 }
 
+/* section.testimonial */
+
+section.testimonial{
+  padding: 60px 0 80px;
+}
+
+section.testimonial > .container{
+  height: 100%;
+}
+
+section.testimonial .testimonial-text{
+  height: 340px;
+  margin-bottom: 50px;
+}
+
+section.testimonial .row .col{
+  height: 500px;
+  margin-bottom: 30px;
+}
+
+section.testimonial .row .col .avatar{
+  background-color: #9792E4;
+}
+
+/* ---------------------------------------------- */
 /* tablet 768px */
 
 @media screen and (min-width: 768px) {
@@ -88,6 +113,8 @@ section.planning .col .card{
   main{
     padding: 50px 0 75px;
   }
+
+    /* section card-presentation */
 
   main section.cards-presentation .col{
     width: calc((100% / 3) - 17px);
@@ -104,15 +131,30 @@ section.planning .col .card{
     flex-wrap: wrap;
     justify-content: space-between;
   }
-}
 
+  /* section testimonial */
+
+  main section.testimonial .row .col{
+    height: 280px;
+  }
+
+  section.testimonial .testimonial-text{
+    height: 210px;
+  }
+}
+/* ---------------------------------------------- */
 /* desktop 992px*/
+
 @media screen and (min-width: 992px) {
+
+  /* section card-presentation */
 
   main section.cards-presentation .col, 
   main section.cards-presentation .col.double{
     height: 345px;
   }
+
+   /* section planning */
 
   main section.planning>.container{
     display: flex;
@@ -121,8 +163,8 @@ section.planning .col .card{
 
   main section.planning>.container .content{
     width: 55%;
-/*     height: 100%;
- */  
+    /* height: 100%;
+   */
     height: 750px;
     margin-bottom: 0px;
   }
@@ -133,6 +175,10 @@ section.planning .col .card{
     align-self: flex-end;
   }
 
+    /* section testimonial */
 
+  section.testimonial .testimonial-text{
+    height: 210px;
+  }
 
 }
