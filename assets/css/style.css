@@ -187,13 +187,61 @@ main section.planning{
 }
 
 section.planning .content{
-  height: 630px;
-  margin-bottom: 35px;
+/*   height: 630px;
+ */  margin-bottom: 35px;
+}
+
+section.planning .content img{
+  margin-bottom: 90px;
+}
+
+section.planning .content h2{
+  margin-bottom: 50px;
+}
+
+section.planning img{
+  width: 100%;
+  height: auto;
+}
+
+section.planning .col .card{
+  padding: 30px 0;
+}
+
+section.planning .card img{
+  margin-bottom: 30px;
+  border: 1px solid black;
+}
+
+section.planning .card:not(img){
+  text-align: center;
+  padding: 0 25px;
+}
+
+
+section.planning .card h3{
+  color: black;
+  font-size: 1.4rem;
+}
+
+section.planning .card p{
+  font-size: 1rem;
+  color: black;
+  font-weight: 400;
+  font-style: italic;
+/*   padding-bottom: 40px;
+ */}
+
+section.planning .card i{
+  padding: 20px;
+  background-color:#9792E4;
+  border-radius: 50%;
+  color: black;
 }
 
 section.planning .col{
-  height: 610px;
-}
+/*   height: 610px;
+ */}
 
 section.planning .col .card{
   background-color: white;
@@ -307,8 +355,27 @@ footer .container{
     padding-top: 130px;     
   }
 
-  main section.planning .col{
+/*   main section.planning .col{
     height: 875px;
+  }
+ */
+  section.planning .content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  section.planning img{
+    width: calc(100% - 60px);
+    align-self: center;
+  }
+
+  section.planning .col .card img{
+    width: 650px;
+  }
+
+  section.planning .card p{
+    font-size: 14px;
+    padding: 0 30px 40px;
   }
 
   /* section testimonial */
@@ -408,8 +475,12 @@ footer .container{
 
   main section.planning>.container .col{
     width: 45%;
-    height: 555px;
-    align-self: flex-end;
+/*     height: 555px;
+ */    align-self: flex-end;
+  }
+
+  section.planning .col .card img{
+    width: 100%;
   }
 
     /* section testimonial */
