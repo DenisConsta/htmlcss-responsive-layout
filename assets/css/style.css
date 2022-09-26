@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+h2{
+  font-size: 2.3rem;
+}
+
+section .row .col{
+  margin-bottom: 30px;
+}
+
 /* utilities */
 
 .debug{
@@ -15,11 +23,16 @@
 }
 
 .container{
-  width: 90%;
+  width: calc(100% - 60px);
   max-width: 1140px;
   margin: 0 auto;
-
   height: 100%;
+}
+
+.flex-wrapbet{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* Header */
@@ -37,12 +50,11 @@ header{
 main .cards-presentation{
   padding-top: 50px;
   padding: 50px 0 55px;
-/*   height: 2000px;
- */}
+}
 
 main .col{
   width: 100%;
-  height: 300px;
+  height: 355px;
 }
 
 main .cards-presentation .col{
@@ -54,7 +66,6 @@ main .col.double{
 }
 
 main .card{
-  width: 100%;
   height: 100%;
   background-color: #B5DDFF;
   border-radius: 35px;
@@ -64,8 +75,7 @@ main .card{
 main section.planning{
   background-color: #9792E4;
   color: white;
-/*   height: 1400px;
- */  padding: 60px 0;
+  padding: 60px 0;
 }
 
 section.planning .content{
@@ -87,10 +97,6 @@ section.testimonial{
   padding: 60px 0 80px;
 }
 
-section.testimonial > .container{
-  height: 100%;
-}
-
 section.testimonial .testimonial-text{
   height: 340px;
   margin-bottom: 50px;
@@ -105,16 +111,77 @@ section.testimonial .row .col .avatar{
   background-color: #9792E4;
 }
 
+/* section.benefits */
+
+main section.benefits{
+  color: white;
+  background-color: #9792E4;
+  padding: 70px 0 30px;
+}
+
+section.benefits h2{
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+section.benefits .row .col{
+  height: 395px;
+}
+
+section.benefits .row .col .card{
+  background-color: white;
+  color: black;
+}
+
+/* section.about-us */
+
+main section.about-us{
+  padding: 90px 0 80px;
+}
+
+section.about-us .about-text{
+  height: 960px;
+  margin-bottom: 50px;
+}
+
+section.about-us .about-testimonial{
+  height: 440px;
+}
+
+/* section.cta */
+
+main section.cta{
+  background-color:#9792E4;
+  height: 615px;
+  padding: 60px 0;
+}
+
+main section.cta .container{
+  max-width: 560px;
+}
+
+/* footer */
+
+footer{
+  background-color: #333333;
+  height: 235px;
+  padding: 40px 0;
+}
+
+footer .container{
+  max-width: 410px;
+}
+
+
 /* ---------------------------------------------- */
 /* tablet 768px */
 
 @media screen and (min-width: 768px) {
+  /* section card-presentation */
 
-  main{
-    padding: 50px 0 75px;
+  main section.cards-presentation{
+    padding-bottom: 75px;      
   }
-
-    /* section card-presentation */
 
   main section.cards-presentation .col{
     width: calc((100% / 3) - 17px);
@@ -126,10 +193,14 @@ section.testimonial .row .col .avatar{
     height: 565px;
   }
 
-  main section.cards-presentation .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  /* section planning */
+
+  main section.planning{
+    padding-top: 130px;     
+  }
+
+  main section.planning .col{
+    height: 875px;
   }
 
   /* section testimonial */
@@ -141,6 +212,34 @@ section.testimonial .row .col .avatar{
   section.testimonial .testimonial-text{
     height: 210px;
   }
+
+  /* section benefits */
+
+  main section.benefits .row .col{
+    width: calc((100% /2) - 15px);
+    height: 415px;
+  }
+
+  /* section about-us*/
+
+  main section.about-us{
+    padding: 100px 0;
+  }
+
+  main section.about-us .container{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 100px);
+  }
+
+  section.about-us .about-text{
+    width: calc(100% - 250px);
+  }
+  
+  section.about-us .about-testimonial{ 
+    width: 250px;
+  }
+  
 }
 /* ---------------------------------------------- */
 /* desktop 992px*/
@@ -163,8 +262,6 @@ section.testimonial .row .col .avatar{
 
   main section.planning>.container .content{
     width: 55%;
-    /* height: 100%;
-   */
     height: 750px;
     margin-bottom: 0px;
   }
@@ -181,4 +278,15 @@ section.testimonial .row .col .avatar{
     height: 210px;
   }
 
+  /* section benefits */
+
+  main section.benefits .row .col{
+    width: calc((100% /3) - 20px);
+  }
+
+    /* section about-us*/
+
+  main section.about-us .container{
+    max-width: 1050px;
+  }
 }
